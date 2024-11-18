@@ -15,12 +15,14 @@ jobs:
 
       - name: Build Frontend Image
         run: |
-          docker build -t my-app-frontend ./frontend
-
+          cd frontend
+          docker build -t my-app-frontend .
+        
       - name: Build Backend Image
         run: |
-          docker build -t my-app-backend ./backend
-
+          cd backend
+          docker build -t my-app-backend .
+        
       - name: Push Images to Docker Hub
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
