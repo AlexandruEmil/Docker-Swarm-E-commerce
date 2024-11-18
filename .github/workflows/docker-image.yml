@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+      - name: perm
+        run: |
+          chmod -R 755 /app
+          
       - name: Build Frontend Image
         run: |
           cd frontend
