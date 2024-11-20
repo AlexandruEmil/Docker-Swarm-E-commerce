@@ -1,52 +1,64 @@
 # Docker-Swarm-E-commerce
- 
-Acest proiect reprezintă o aplicație e-commerce construită pentru a demonstra utilizarea Docker Swarm în orchestrarea containerelor. Scopul său principal este de a oferi un mediu scalabil, fiabil și ușor de gestionat pentru aplicațiile distribuite.
 
-# Caracteristici principale
+This project represents an e-commerce application designed to demonstrate the use of Docker Swarm for container orchestration. Its primary goal is to provide a scalable, reliable, and easy-to-manage environment for distributed applications.
 
- ###  Arhitectură distribuită: 
- - Aplicația este compusă din mai multe servicii (frontend, backend, și bază de date), fiecare containerizat și gestionat de Docker Swarm. 
- ###  Scalabilitate automată:
- - Suport pentru creșterea sau reducerea dinamică a numărului de instanțe ale serviciilor în funcție de cerințe. 
- ### Persistență a datelor
- - Baza de date utilizează volume Docker pentru a asigura păstrarea datelor în cazul restartării containerelor. 
- ###  Rețea securizată:
- - Toate serviciile comunică prin rețele Docker Swarm securizate. 
- ###  Simplitate în implementare: 
- - Configurare și lansare rapidă folosind fișierele docker-compose.yml. 
+# Key Features
 
-# Structura proiectului
+### Distributed Architecture:
 
-   ### Frontend:
-   - Interfața utilizatorului construită pentru a permite navigarea și cumpărăturile online.
-   ### Backend:
-   - API-ul care gestionează logica aplicației și interacțiunile cu baza de date.
-   ### Database: 
-   - Sistem de management al datelor pentru stocarea utilizatorilor, produselor și comenzilor.
+   - The application consists of multiple services (frontend, backend, and database), each containerized and managed by Docker Swarm.
 
-# Cum să rulezi proiectul?
+### Automatic Scalability:
 
-   ### Cerințe preliminare:
-   ```Docker``` și ```Docker Compose``` instalate.
-        
-   Activarea ```Docker Swarm``` pe mașina ta (```docker swarm init```).
+   - Supports dynamically increasing or decreasing the number of service instances based on demand.
 
-# Clonează proiectul:
-```
-git clone https://github.com/AlexandruEmil/Docker-Swarm-E-commerce.git
-```
-```
-cd Docker-Swarm-E-commerce
-```
+### Data Persistence:
 
-# Lansează stack-ul Docker:
+   - The database uses Docker volumes to ensure data retention even if containers are restarted.
 
-    docker stack deploy -c docker-compose.yml ecommerce
+### Secure Networking:
 
- ###  Accesează aplicația:
-   Frontend-ul va fi disponibil pe portul configurat (de exemplu, ```http://localhost:3000```).
-   API-ul pe alt port specificat (de exemplu, ```http://localhost:5000```).
+   - All services communicate through secure Docker Swarm networks.
 
-# Obiective
-   Învățarea conceptelor de bază ale Docker Swarm și orchestrarea containerelor.
-   Construirea unui proiect scalabil care poate fi extins cu ușurință în medii de producție.
+### Ease of Deployment:
+
+   - Quick setup and deployment using ```docker-compose.yml files```.
+
+# Project Structure
+
+### Frontend:
+
+  - The user interface built for browsing and online shopping.
+
+### Backend:
+
+  - The API that handles the application logic and interactions with the database.
+
+### Database:
+
+  - A data management system for storing users, products, and orders.
+
+# How to Run the Project?
+### Prerequisites:
+
+  - ```Docker``` and ```Docker Compose``` installed. \
+  - ```Docker Swarm``` activated on your machine (```docker swarm init```).
+
+# Clone the Project:
+
+- ```git clone https://github.com/AlexandruEmil/Docker-Swarm-E-commerce.git``` \
+- ```cd Docker-Swarm-E-commerce```
+
+# Deploy the Docker Stack:
+
+```docker stack deploy -c docker-compose.yml ecommerce```
+
+# Access the Application:
+
+   The frontend will be available on the configured port (e.g., http://localhost:3000). \
+   The API will be accessible on another specified port (e.g., http://localhost:5000).
+
+# Objectives
+
+   Learn the basics of Docker Swarm and container orchestration.
+   Build a scalable project that can be easily extended to production environments.
